@@ -22,7 +22,7 @@ console.log(arr)
 //   [ 15, 14, 13, 12, 11 ],
 //   [ 10, 9, 8, 7, 6 ],
 //   [ 5, 4, 3, 2, 1 ] ]
-const arr = []
+const arra = []
 let count = 25
 for (let i = 0; i < 5; i++) {
   const linha = []
@@ -30,9 +30,9 @@ for (let i = 0; i < 5; i++) {
     linha[j] = count
     count--
   }
-  arr[i] = linha
+  arra[i] = linha
 }
-console.log(arr)
+console.log(arra)
 
 // 3 - Retorne o valor mais alto das somas entre o total de valors por linha, de uma array 4x4.
 //const arr4x4 = [[23, 56, 9, 0], [8, 24, 50, 5], [9, 10, 40, 7], [9, 48, 15, 2]]
@@ -41,7 +41,7 @@ console.log(arr)
 // 5 6 6 7
 // 9 9 9 9
 // Resultado esperado -> 36
-const arr = []
+const arra = []
 const arr4x4 = [[23, 56, 9, 0], [8, 24, 50, 5], [9, 10, 40, 7], [9, 48, 15, 2]]
 for (let i = 0; i < arr4x4.length; i++) {
   let total = arr4x4[i].reduce(function(a, b) {
@@ -49,7 +49,7 @@ for (let i = 0; i < arr4x4.length; i++) {
   })
   arr[i] = total
 }
-console.log(Math.max(...arr))
+console.log(Math.max(...arra))
 
 //ou ...
 
@@ -128,21 +128,33 @@ console.log(dadosOrganizados)
 //   [71, 72, 73, 74, 75]
 // ]
 
-//7- const cacaPalavras = [
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "l", "e", "f", "a", "n", "t", "e"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["c", "a", "s", "a", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
-//   ["a", "w", "e", "r", "e", "d", "e", "u", "i", "r"],
-//   ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"]
-// ]
+//7- 
+const palavras = ["elefante", "casa", "rede"]
 
-// const palavras = ["elefante", "casa", "rede"]
+const cacaPalavras = [
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "l", "e", "f", "a", "n", "t", "e"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["c", "a", "s", "a", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"],
+  ["a", "w", "e", "r", "e", "d", "e", "u", "i", "r"],
+  ["a", "w", "e", "r", "t", "y", "u", "u", "i", "r"]
+]
+
+
+for(let i = 0; cacaPalavras.length; i++ ){
+  cacaPalavras[i] = cacaPalavras[i].join("")
+  for(let j = 0; cacaPalavras.length ; j++){
+    if(cacaPalavras[i].indexOf(palavras[j]) > -1) {
+      console.log(` A palavra ${palavras[j]} está na linha ${i + 1} e começa na coluna ${cacaPalavras[i].indexOf(palavras[j] +1)}` )
+    }
+  }
+}
+
 
 // ache as palavras da array palavras na array cacaPalavras e diga em qual linha e em qual coluna
 // elas estao.
