@@ -29,7 +29,6 @@ console.log(pokemon.falar())
 // Printe no console a seguinte
 // frase: "Oi, meu nome é  < >.
 // e meu nome japones é < >."
-
 console.log(`Oi meu nome é: ${pokemon.nome} e meu nome em japones é ${pokemon.nomeJapones}! HAHAHA`)
 
 // 3.
@@ -59,6 +58,12 @@ console.log(pokemon.voar())
 // `action` ao seu pokemon
 // que retorna randomicamente uma
 // das Strings "FIGHT", "BAG" ou "RUN".
+pokemon.action = function (){
+    let opcoes = ["FIGHT", "BAG", "RUN"]
+    return(opcoes[Math.random() < 0.5 ? 0 : 1])
+}
+
+console.log(pokemon.action())
 
 // 6.
 // Adicione um método chamado
@@ -66,15 +71,24 @@ console.log(pokemon.voar())
 // no console "O que o  < > vai fazer?" e
 // retorna o resultado do metodo
 // `acao`.
+pokemon.pergunta = function(){
+    console.log(` O que o ${pokemon.nome} vai fazer?`)
+    console.log(pokemon.action())
+}
+
+console.log(pokemon.pergunta())
 
 // 7.
 // Printe todas as propriedades
 // do seu pokemon no console.
+console.log(Object.keys(pokemon))
 
 // 8.
 // Printe todas as propriedades
 // e seus respectivos valores no
 // console no seguinte formato:
 // <propriedade>: <valor
+
+
 
 //9 Faça uma função construtora de pokemon
