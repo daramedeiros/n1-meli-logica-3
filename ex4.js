@@ -85,3 +85,9 @@ function ordenarTerrenos(arrTerrrenos){
     console.log(ordenados[0], ordenados[ordenados.length -1])
 }
 // 12 - Crie uma função que Imprima o mais caro.
+function ordenarTerrenos(arrTerrrenos){
+    const ordenados = arrTerrrenos.sort(function(a,b){
+        return a.preco + b.preco
+    })
+    console.log(ordenados[0], ordenados[ordenados.length -1])
+}
