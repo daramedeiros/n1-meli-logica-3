@@ -29,8 +29,13 @@ botaoEnviar.addEventListener("click", function(e) {
   //estamos recevendo aqui os dados
   console.log(nome.value, dataDeNasc.value, nasceuEmSP())
 })
-
 //  btnMostrar.addEventListener("click", funcao para mostrar alunas)
+const alunas = []
+function criarAluna(){
+  let id = 0;
+  alunas.push( new alunas(nome, dataDeNasc, SP, ++id))
+}
+
 
 function calcularIdade(anoDeNasc, mesDeNasc, diaDeNasc) {
   const now = new Date()
